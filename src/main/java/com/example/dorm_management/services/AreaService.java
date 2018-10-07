@@ -1,6 +1,6 @@
 package com.example.dorm_management.services;
 
-import com.example.dorm_management.domain.Area;
+import com.example.dorm_management.entities.Area;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

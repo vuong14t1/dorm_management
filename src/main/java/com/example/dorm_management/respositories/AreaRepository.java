@@ -1,6 +1,6 @@
 package com.example.dorm_management.respositories;
 
-import com.example.dorm_management.domain.Area;
+import com.example.dorm_management.entities.Area;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

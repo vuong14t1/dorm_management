@@ -1,6 +1,6 @@
 package com.example.dorm_management.controllerss;
 
-import com.example.dorm_management.domain.Area;
+import com.example.dorm_management.entities.Area;
 import com.example.dorm_management.services.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.example.dorm_management.domain;
+package com.example.dorm_management.entities;
 
 import lombok.Data;
 import javax.persistence.Entity;
