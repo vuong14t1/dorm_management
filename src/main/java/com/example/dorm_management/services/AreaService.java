@@ -1,16 +1,16 @@
 package com.example.dorm_management.services;
 
-import com.example.dorm_management.entities.AreaEntity;
+import com.example.dorm_management.entities.Area;
 
 import java.util.List;
 
 public interface AreaService {
 
-    List<AreaEntity> findAllAreas();
+    List<Area> findAllAreas();
 
-    AreaEntity findAreaById(Integer id);
+    Area findAreaById(Integer id);
 
-    AreaEntity addNewArea(AreaEntity areaEntity);
+    Area addNewArea(Area areaEntity);
 
-    boolean editArea(AreaEntity areaEntity, AreaEntity areaEntityEdit);
+    boolean editArea(Area areaEntity, Area areaEntityEdit);
 }

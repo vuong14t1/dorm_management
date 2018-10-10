@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @Table(name = "area")
-public class AreaEntity {
+public class Area {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -47,13 +47,12 @@ public class AreaEntity {
         this.status = status;
     }
 
-    public AreaEntity(Integer id, String name, Integer numberFloor, Integer status) {
-        this.id = id;
+    public Area(String name, Integer numberFloor, Integer status) {
         this.name = name;
         this.numberFloor = numberFloor;
         this.status = status;
     }
 
-    public AreaEntity() {
+    public Area() {
     }
 }

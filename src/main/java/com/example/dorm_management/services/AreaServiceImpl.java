@@ -1,11 +1,8 @@
 package com.example.dorm_management.services;
 
-import com.example.dorm_management.entities.AreaEntity;
+import com.example.dorm_management.entities.Area;
 import com.example.dorm_management.respositories.AreaRepository;
-import org.hibernate.exception.ConstraintViolationException;
-import org.hibernate.exception.JDBCConnectionException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.ConstantException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,17 +14,17 @@ public class AreaServiceImpl implements AreaService {
     private AreaRepository areaRepository;
 
     @Override
-    public List<AreaEntity> findAllAreas() {
+    public List<Area> findAllAreas() {
         return areaRepository.findAll();
     }
 
     @Override
-    public AreaEntity findAreaById(Integer id) {
+    public Area findAreaById(Integer id) {
         return areaRepository.findOne(id);
     }
 
     @Override
-    public AreaEntity addNewArea(AreaEntity areaEntity) {
+    public Area addNewArea(Area areaEntity) {
         try{
             return areaRepository.save(areaEntity);
         } catch (Exception e) {
@@ -38,7 +35,7 @@ public class AreaServiceImpl implements AreaService {
     }
 
     @Override
-    public boolean editArea(AreaEntity areaEntity, AreaEntity areaEntityEdit) {
+    public boolean editArea(Area areaEntity, Area areaEntityEdit) {
         try{
 
             areaEntityEdit.setName(areaEntity.getName());

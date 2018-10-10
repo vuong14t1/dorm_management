@@ -1,6 +1,6 @@
 package com.example.dorm_management.controllers;
 
-import com.example.dorm_management.entities.AreaEntity;
+import com.example.dorm_management.entities.Area;
 import com.example.dorm_management.services.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,14 +26,14 @@ public class AreaController {
 
     /*get all area in system*/
     @GetMapping
-    public List<AreaEntity> getAllAreas(){
+    public List<Area> getAllAreas(){
         return areaService.findAllAreas();
     }
 
     /*get one area by id area*/
     @GetMapping(value = "/{id}")
-    public ResponseEntity<AreaEntity> getAreaById(@PathVariable Integer id){
-        AreaEntity areaEntity = areaService.findAreaById(id);
+    public ResponseEntity<Area> getAreaById(@PathVariable Integer id){
+        Area areaEntity = areaService.findAreaById(id);
         if ( areaEntity == null) {
             return ResponseEntity.notFound().build();
         }else {
@@ -44,14 +44,14 @@ public class AreaController {
 
     @PutMapping(value = "/edit/{id}")
     @ResponseStatus(HttpStatus.OK)
-//    public ResponseEntity<AreaEntity> updateArea(@PathVariable(value = "id") Integer id, @Valid @RequestBody AreaEntity areaEntity, Error error){
-     public ResponseEntity<AreaEntity> updateArea(@PathVariable(value = "id") Integer id, @Valid @RequestBody AreaEntity areaEntity){
+//    public ResponseEntity<Area> updateArea(@PathVariable(value = "id") Integer id, @Valid @RequestBody Area areaEntity, Error error){
+     public ResponseEntity<Area> updateArea(@PathVariable(value = "id") Integer id, @Valid @RequestBody Area areaEntity){
 //         if(error.hashCode()) {
 //            return ResponseEntity.badRequest().body(ValidationErrorBuilder.fromBindingErrors(errors));
 //
 //        }
 
-        AreaEntity areaEntityEdit = areaService.findAreaById(id);
+        Area areaEntityEdit = areaService.findAreaById(id);
 
         if (areaEntityEdit == null) {
             return ResponseEntity.notFound().build();
@@ -67,7 +67,7 @@ public class AreaController {
 
     @PutMapping(value = "/add")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<AreaEntity> addNewArea(@Valid @RequestBody AreaEntity areaEntity) {
+    public ResponseEntity<Area> addNewArea(@Valid @RequestBody Area areaEntity) {
         if (areaService.addNewArea(areaEntity) == null) {
             return ResponseEntity.ok().body(areaEntity);
         } else {
