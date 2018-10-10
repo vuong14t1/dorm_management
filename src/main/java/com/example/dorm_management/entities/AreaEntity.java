@@ -1,21 +1,22 @@
 package com.example.dorm_management.entities;
 
+
+import lombok.Data;
+
 import javax.persistence.*;
-import java.util.Collection;
-import java.util.Objects;
+
 
 @Entity
+@Data
 @Table(name = "area", schema = "dorm")
 public class AreaEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private Integer numberFloor;
     private Integer status;
-    private Collection<FloorEntity> floorsById;
-    private Collection<RoomEntity> roomsById;
 
-    @Id
-    @Column(name = "id")
     public Integer getId() {
         return id;
     }
@@ -24,8 +25,6 @@ public class AreaEntity {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -34,8 +33,6 @@ public class AreaEntity {
         this.name = name;
     }
 
-    @Basic
-    @Column(name = "numberFloor")
     public Integer getNumberFloor() {
         return numberFloor;
     }
@@ -44,8 +41,6 @@ public class AreaEntity {
         this.numberFloor = numberFloor;
     }
 
-    @Basic
-    @Column(name = "status")
     public Integer getStatus() {
         return status;
     }
@@ -54,37 +49,13 @@ public class AreaEntity {
         this.status = status;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        AreaEntity that = (AreaEntity) o;
-        return Objects.equals(id, that.id) &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(numberFloor, that.numberFloor) &&
-                Objects.equals(status, that.status);
+    public AreaEntity(Integer id, String name, Integer numberFloor, Integer status) {
+        this.id = id;
+        this.name = name;
+        this.numberFloor = numberFloor;
+        this.status = status;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, numberFloor, status);
-    }
-
-    @OneToMany(mappedBy = "areaByAreaId")
-    public Collection<FloorEntity> getFloorsById() {
-        return floorsById;
-    }
-
-    public void setFloorsById(Collection<FloorEntity> floorsById) {
-        this.floorsById = floorsById;
-    }
-
-    @OneToMany(mappedBy = "areaByAreaId")
-    public Collection<RoomEntity> getRoomsById() {
-        return roomsById;
-    }
-
-    public void setRoomsById(Collection<RoomEntity> roomsById) {
-        this.roomsById = roomsById;
+    public AreaEntity() {
     }
 }
