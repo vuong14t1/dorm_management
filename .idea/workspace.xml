@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="133db1dc-d267-4d81-8804-bef7e21ae78f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/entities/Floor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/libararies/Enum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/libararies/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/libararies/ValidationError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/respositories/FloorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/services/FloorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/services/FloorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/controllers/AreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/controllers/AreaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/entities/AreaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/entities/AreaEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/respositories/AreaRespository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/respositories/AreaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/services/AreaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/services/AreaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/services/AreaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dorm_management/services/AreaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dorm_management/controllers/AreaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dorm_management/controllers/AreaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dorm_management/entities/AreaEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dorm_management/entities/AreaEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dorm_management/respositories/AreaRespository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dorm_management/services/AreaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dorm_management/services/AreaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dorm_management/services/AreaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dorm_management/services/AreaServiceImpl.class" afterDir="false" />
-    </list>
+    <list default="true" id="133db1dc-d267-4d81-8804-bef7e21ae78f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -627,12 +606,12 @@
       <workItem from="1539004714013" duration="1193000" />
       <workItem from="1539008913721" duration="48000" />
       <workItem from="1539175918080" duration="14331000" />
-      <workItem from="1539192076057" duration="655000" />
+      <workItem from="1539192076057" duration="1029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58954000" />
+    <option name="totallyTimeSpent" value="59328000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
