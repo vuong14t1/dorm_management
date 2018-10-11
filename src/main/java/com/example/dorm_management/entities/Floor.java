@@ -12,8 +12,12 @@ public class Floor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String name;
+
+    @Column(name = "area_id")
     private Integer areaId;
+
     private Integer status;
 
     public Integer getId() {

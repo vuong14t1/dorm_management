@@ -13,8 +13,12 @@ public class Area {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String name;
+
+    @Column(name = "number_floor")
     private Integer numberFloor;
+
     private Integer status;
 
     public Integer getId() {
