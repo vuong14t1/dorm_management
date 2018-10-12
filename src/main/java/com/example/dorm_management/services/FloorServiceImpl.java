@@ -18,7 +18,7 @@ public class FloorServiceImpl implements FloorService {
     }
 
     @Override
-    public Floor findById(Integer id) {
-        return floorRepository.findOne(id);
+    public Floor findOneById(Integer id) {
+        return floorRepository.findOneById(id);
     }
 }

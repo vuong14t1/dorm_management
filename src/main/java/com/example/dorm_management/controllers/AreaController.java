@@ -43,9 +43,8 @@ public class AreaController {
         }
     }
 
-    /*get one area by id area*/
     @GetMapping(value = "/{id}")
-    public JsonResponse getAreaById(@PathVariable Integer id){
+    public JsonResponse getAreaById(@PathVariable(value = "id") Integer id){
         try{
             Area areaEntity = areaService.findAreaById(id);
             if ( areaEntity == null) {

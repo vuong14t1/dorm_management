@@ -5,6 +5,7 @@ import com.example.dorm_management.entities.Floor;
 import com.example.dorm_management.entities.Room;
 import com.example.dorm_management.json.API;
 import com.example.dorm_management.json.JsonResponse;
+import com.example.dorm_management.services.AreaService;
 import com.example.dorm_management.services.FloorService;
 import com.example.dorm_management.services.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,20 +30,45 @@ public class RoomController {
     @Autowired
     private FloorService floorService;
 
+    @Autowired
+    private AreaService areaService;
+
     private JsonResponse jsonResponse;
 
-    @GetMapping("/floor/{id}")
-    public JsonResponse findRoomsByFloorId(@PathVariable(value = "id") Integer id) {
-        Floor floor = floorService.findById(id);
+    @GetMapping("/floor/{area_id}/{floor_id}")
+    public JsonResponse findRoomsByFloorId(@PathVariable(value = "area_id") Integer areaId, @PathVariable(value = "floor_id") Integer floorId ) {
+        Floor floor = floorService.findOneById(floorId);
         if (floor == null) {
             jsonResponse = return_No_Object_JsonPresonse(API.CODE_API_NOTFOUND,
-                    "Không có tầng nào có id = " + id);
+                    "Không có tầng nào có id = " + floorId);
 
             return jsonResponse;
         } else {
-            List<Room> rooms = roomService.findRoomsByFloorId(id);
+            List<Room> rooms = roomService.findRoomsByFloorId(floorId, areaId);
             if (rooms.size() > 0) {
                 jsonResponse = return_List_Object_JsonPresonse(API.CODE_API_YES, "", rooms);
+
+                return jsonResponse;
+            } else {
+                jsonResponse = return_No_Object_JsonPresonse(API.CODE_API_NOTFOUND, "Không có phòng nào!");
+
+                return jsonResponse;
+            }
+        }
+    }
+
+    @GetMapping("/area/{id}")
+    public JsonResponse findRoomsByAreaId(@PathVariable(value = "id") Integer id) {
+        Area area = areaService.findAreaById(id);
+        if (area == null) {
+            jsonResponse = return_No_Object_JsonPresonse(API.CODE_API_NOTFOUND,
+                    "Không có nha nào có id = " + id);
+
+            return jsonResponse;
+        } else {
+            List<Room> rooms = roomService.findRoomsByAreaId(id);
+            if (rooms.size() > 0) {
+                jsonResponse = return_List_Object_JsonPresonse(API.CODE_API_YES, "Danh sach phong!", rooms);
 
                 return jsonResponse;
             } else {

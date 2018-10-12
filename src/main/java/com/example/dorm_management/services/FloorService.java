@@ -9,5 +9,5 @@ public interface FloorService  {
 
     List<Floor> findFloorsByAreaId(Integer areaId);
 
-    Floor findById(Integer id);
+    Floor findOneById(Integer id);
 }

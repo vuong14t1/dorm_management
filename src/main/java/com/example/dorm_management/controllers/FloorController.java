@@ -33,13 +33,13 @@ public class FloorController {
 
     @GetMapping("/{id}")
     public JsonResponse getFloorsByAreaId(@PathVariable(value = "id") Integer areaId) {
-        Area area = areaService.findAreaById(areaId);
+        /*Area area = areaService.findAreaById(areaId);
         if (area == null) {
             jsonResponse = return_No_Object_JsonPresonse(API.CODE_API_ID_NOTFOUND,
                     "Không có khu nhà có id = " + areaId);
 
             return jsonResponse;
-        } else {
+        } else {*/
             List<Floor> floors = floorService.findFloorsByAreaId(areaId);
             if ( floors.size() > 0) {
 
@@ -49,7 +49,7 @@ public class FloorController {
                 jsonResponse = return_No_Object_JsonPresonse(API.CODE_API_NOTFOUND, "Không có tầng nào của nhà có id = " + areaId);
                 return jsonResponse;
             }
-        }
+//        }
     }
 
     public JsonResponse return_No_Object_JsonPresonse(Integer code, String message){
